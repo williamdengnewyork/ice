@@ -15,8 +15,8 @@ public class FindPairsOfSum {
 	public static void main(String[] args) {
 
 		// Assumption: Input array of unsorted integers
-//		int[] a = {6,1,5,3,4,2,9,11,13,8,7}; 		
-		int[] a = {6}; 		
+		//int[] a = {6}; 		
+		int[] a = {6,1,5,3,4,2,9,11,13,8,7}; 		
 		int sumValue = 13;
 
 		searchPairsBySum(a, sumValue);
