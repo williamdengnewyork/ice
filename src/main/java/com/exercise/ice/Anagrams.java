@@ -10,6 +10,13 @@ import java.util.TreeSet;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+/* 
+Problem:
+Write me a program that accepts a block of text (English words), 
+and outputs the groups of words that are anagrams of each other.  
+For example, “apt”, “tap” and “pat” are anagrams of each other.
+*/
+
 public class Anagrams {
 
 	// convert a given word into a string of its sorted characters

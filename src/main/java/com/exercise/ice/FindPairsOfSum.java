@@ -1,5 +1,11 @@
 package com.exercise.ice;
 
+/*
+Problem: 
+Write me a program that that accepts an array of integers, and prints out the pairs of these integers that sum to 7.  
+For example, If the input is [1, 2, 3, 4, 5, 6], the output could be (1,6), (2, 5), (3, 4), or (6,1), (5, 2), (4,3).   
+Different combinations of the same pair of numbers e.g, (1, 6) and (6, 1) are not distinct.
+*/
 
 public class FindPairsOfSum {
 	static int sorttime=0;
