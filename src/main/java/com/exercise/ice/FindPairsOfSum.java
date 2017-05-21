@@ -1,5 +1,6 @@
 package com.exercise.ice;
 
+
 /*
 Problem: 
 Write me a program that that accepts an array of integers, and prints out the pairs of these integers that sum to 7.  
@@ -14,7 +15,8 @@ public class FindPairsOfSum {
 	public static void main(String[] args) {
 
 		// Assumption: Input array of unsorted integers
-		int[] a = {6,1,5,3,4,2,9,11,13,8,7}; 		
+//		int[] a = {6,1,5,3,4,2,9,11,13,8,7}; 		
+		int[] a = {6}; 		
 		int sumValue = 13;
 
 		searchPairsBySum(a, sumValue);
@@ -26,6 +28,10 @@ public class FindPairsOfSum {
 	public static void searchPairsBySum(int[] a, int target){
 		if (a == null || a.length == 0){
 			System.out.println("Warning: Array is null or has no element!");
+			return;
+		}
+		if (a.length == 1){
+			System.out.println("Warning: Array has less than 2 elements!");
 			return;
 		}
 		
@@ -47,7 +53,8 @@ public class FindPairsOfSum {
 			}			
 		}
 	}
-
+	
+	//quick sort
 	public static void quickSort(int[] arr, int low, int high) { //O(NlogN)
 		if (arr == null || arr.length == 0)
 			return;
