@@ -15,7 +15,7 @@ public class FindPairsOfSum {
     public static void main(String[] args) {
 
 		int sumValue = 7;
-		int[] a = {6,1,5,-3,4,2,9,11,13,8,0,7,16,10,3};  // unsorted array 		
+		int[] a = {6,1,1,1,5,-3,4,2,9,11,13,8,0,7,16,10,3};  // unsorted array 		
 		
 		System.out.println("Array Size     : " + a.length );
 		System.out.println("Sum Value = " + sumValue);
@@ -34,7 +34,7 @@ public class FindPairsOfSum {
 	}
 
 	// O(n)
-    static void searchPairsBySum(int[] a, int sum){
+    static void searchPairsBySum(int[] a, int target){    	
 		if (a == null || a.length == 0){
 			System.out.println("Warning: Array is null or has no element!");
 			return;
@@ -45,15 +45,16 @@ public class FindPairsOfSum {
 		}		
         boolean[] binmap = new boolean[MAX]; 
 		boolean[] binmapNegative=new boolean[MAX];
+		//boolean[] binmapDiff = new boolean[MAX];
 		for (int i = 0; i < a.length; i++) {
-			int temp = sum - a[i];
-			if (temp < 0) {
-				if (binmapNegative[Math.abs(temp)]) {
-					System.out.println("(" + temp + "," + a[i] + ")");
+			int diff = target - a[i];
+			if (diff < 0) {
+				if (binmapNegative[Math.abs(diff)]) {
+					System.out.println("(" + diff + "," + a[i] + ")");
 				}
 			} else {
-				if (binmap[temp] ) {
-					System.out.println("(" + temp + "," + a[i] + ")");
+				if (binmap[diff]) {
+					System.out.println("(" + diff + "," + a[i] + ")");
 				}
 			}
 
