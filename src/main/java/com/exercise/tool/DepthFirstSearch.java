@@ -1,4 +1,4 @@
-package com.exercise.ice;
+package com.exercise.tool;
 
 import java.util.Stack;
 
